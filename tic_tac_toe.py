@@ -177,11 +177,11 @@ def draw_board(canvas, BOARD_LENGTH):
 
     # draw 2 vertical lines
     for i in range(1,3):
-        vertical_first_line = canvas.create_line(i*one_third_length, 0, i*one_third_length, BOARD_LENGTH, 'white')
+        vertical_first_line = canvas.create_line(i*one_third_length, 0, i*one_third_length, BOARD_LENGTH, 'yellow')
    
     # draw 3 horizontal lines
     for i in range(1,4):
-        horizontal_line = canvas.create_line(0, i*one_third_length, BOARD_LENGTH, i*one_third_length, 'white') 
+        horizontal_line = canvas.create_line(0, i*one_third_length, BOARD_LENGTH, i*one_third_length, 'yellow') 
 
 
 if __name__ == '__main__':
