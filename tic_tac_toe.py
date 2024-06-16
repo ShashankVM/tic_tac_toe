@@ -14,7 +14,7 @@ def main():
     330, 
     text = f"Welcome to Tic Tac Toe!",
     font = 'Arial', 
-    font_size = 25, 
+    font_size = 22, 
     color ='teal'
     )
     time.sleep(1)
@@ -24,6 +24,8 @@ def main():
     player_1_turn = True
     game_over = False
     number_of_turns_played = 0
+    player_1_name = input("Player 1, Enter your name: ")
+    player_2_name = input("Player 2, Enter your name: ")
     while not game_over:
           
         if number_of_turns_played >= 5:
@@ -31,7 +33,7 @@ def main():
                 if result is not None:
                     draw_arrow(canvas, result) 
                     time.sleep(0.5) 
-                    print_message(canvas, initial_text, f"Congratulations Player {player_num}!")               
+                    print_message(canvas, initial_text, f"Congratulations {player_name}!")               
                     game_over = True
                     break
 
@@ -40,8 +42,8 @@ def main():
                 print_message(canvas, initial_text, f"Game Over!")
                 break
 
-        piece, player_num = ['X', 1] if player_1_turn == True else ['O', 2]
-        print_message(canvas, initial_text, f"Player {player_num} turn")
+        piece, player_name = ['X', player_1_name] if player_1_turn == True else ['O', player_2_name]
+        print_message(canvas, initial_text, f"{player_name}, your turn")
    
         click = canvas.get_last_click() 
         if click is not None:
